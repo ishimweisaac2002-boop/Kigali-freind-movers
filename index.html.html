@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>kigali Freind Movers</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .services {
+      background: #ffffff;
+    }
+
+    .booking {
+      background: #e6f7ff;
+    }
+
+    .contact {
+      background: #ffe6e6;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      width: 200px;
+    }
+
+    button {
+      background: #2193b0;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Friend Movers Company</h1>
+  <p>We move your life safely and professionally</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#booking">Booking</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section>
+  <h2>Welcome</h2>
+  <p>We help you move homes, offices, and furniture with care and professionalism.</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Friend Movers Company provides reliable moving services, including packing, organizing, and transportation. We value your trust and are committed to delivering excellent service without disappointment. We ensure your items are handled safely and professionally.
+  </p>
+</section>
+
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <p>✔ House Moving</p>
+  <p>✔ Office Relocation</p>
+  <p>✔ Furniture Transport</p>
+  <p>✔ Packing & Arrangement</p>
+</section>
+
+<section id="booking" class="booking">
+  <h2>Book Our Service</h2>
+
+ <form onsubmit="sendToWhatsApp(event)">
+  <input type="text" id="name" placeholder="Your Name" required><br>
+  <input type="date" id="date" required><br>
+  <input type="time" id="time" required><br>
+  <br>
+  <button type="submit">Book Now</button>
+</form>
+
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: friendmovers@email.com</p>
+  <p>Phone: +250 789005294</p>
+<a href="https://wa.me/250789005294" target="_blank">
+  <button style="background:#25D366;color:white;padding:15px;border:none;border-radius:5px;">
+    Book via WhatsApp
+  </button>
+</a>
+</section>
+
+<footer>
+  <p>© 2026 Friend Movers Company</p>
+</footer>
+
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+
+  var message = "Hello Friend Movers, I want to book a service.%0A"
+              + "Name: " + name + "%0A"
+              + "Date: " + date + "%0A"
+              + "Time: " + time;
+
+  var phone = "250789005294"; // your number
+
+  var url = "https://wa.me/" + phone + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
